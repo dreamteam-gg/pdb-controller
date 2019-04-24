@@ -54,6 +54,9 @@ func main() {
 	if config.Kubeconfig != "" {
 		log.Infof("Using current context from kubeconfig file: %v", config.Kubeconfig)
 		kubernetesClientConfig, err = clientcmd.BuildConfigFromFlags("", config.Kubeconfig)
+		if err != nil {
+			log.Fatal(err)
+		}
 	} else {
 		kubernetesClientConfig, err = rest.InClusterConfig()
 		if err != nil {
