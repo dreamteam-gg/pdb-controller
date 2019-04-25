@@ -12,10 +12,6 @@ addons:
       # needed for the snap pipe:
       - snapd
 
-branches:
-  only:
-    - master
-
 go:
   - 1.12.4
 
