@@ -69,12 +69,12 @@ $ golangci-lint run
 ## Setup
 
 The `pdb-controller` can be run as a deployment in the cluster or locally. See
-[deployment.yaml](/docs/deployment.yaml) for an in-cluster example.
+[deployment.yaml](/Docs/deployment.yaml) for an in-cluster example.
 
 Deploy it to cluster by running:
 
 ```bash
-$ kubectl apply -f docs/deployment.yaml
+$ kubectl apply -f Docs/deployment.yaml
 ```
 
 Or run locally for debug purposes:

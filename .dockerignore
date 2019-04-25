@@ -4,7 +4,7 @@
 .goreleaser.yml
 .travis.yml
 coverage.txt
-docs
+Docs
 CONTRIBUTING.md
 LICENSE
 MAINTAINERS.md
