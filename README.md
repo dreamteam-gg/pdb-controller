@@ -45,12 +45,22 @@ way to ensure broken deployments doesn't block cluster operations.
 
 ## Building
 
-To build this project you need to have [Go](https://golang.org/dl/) installed
-and checkout the repository.
+To build this project you need to install [Go](https://golang.org/dl/) and checkout the repository.
 
 ```bash
-$ git clone https://github.com/mikkeloscar/pdb-controller.git
+$ git clone https://github.com/dreamteam-gg/pdb-controller.git
+$ cd pdb-controller
 $ go build
+```
+
+## GolangCI-Lint
+
+To run code linting for this project you need to install [GolangCI-Lint](https://github.com/golangci/golangci-lint#install) and checkout the repository.
+
+```bash
+$ git clone https://github.com/dreamteam-gg/pdb-controller.git
+$ cd pdb-controller
+$ golangci-lint run
 ```
 
 ## Setup
