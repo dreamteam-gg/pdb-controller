@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/dreamteam-gg/pdb-controller.svg?branch=master)](https://travis-ci.com/dreamteam-gg/pdb-controller)
+[![Docker Repository on Quay](https://quay.io/repository/dreamteam/pdb-controller/status "Docker Repository on Quay")](https://quay.io/repository/dreamteam/pdb-controller)
 
 # Pod Disruption Budget Controller
 
@@ -68,12 +69,12 @@ $ golangci-lint run
 ## Setup
 
 The `pdb-controller` can be run as a deployment in the cluster or locally. See
-[deployment.yaml](/Docs/deployment.yaml) for an in-cluster example.
+[deployment.yaml](/docs/deployment.yaml) for an in-cluster example.
 
 Deploy it to cluster by running:
 
 ```bash
-$ kubectl apply -f Docs/deployment.yaml
+$ kubectl apply -f docs/deployment.yaml
 ```
 
 Or run locally for debug purposes:
