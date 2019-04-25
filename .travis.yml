@@ -26,9 +26,8 @@ notifications:
 
 env:
   # needed for the snap pipe:
-  - PATH=/snap/bin:$PATH
   # enforcing go mod in GOPATH
-  - GO111MODULE=on
+  - PATH=/snap/bin:$PATH GO111MODULE=on
 
 services:
   - docker
