@@ -3,6 +3,7 @@
 .golangci.yml
 .goreleaser.yml
 .travis.yml
+coverage.txt
 docs
 CONTRIBUTING.md
 LICENSE
