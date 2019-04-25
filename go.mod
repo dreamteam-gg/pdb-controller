@@ -1,4 +1,4 @@
-module github.com/mikkeloscar/pdb-controller
+module github.com/dreamteam-gg/pdb-controller
 
 go 1.12
 
