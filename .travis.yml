@@ -7,10 +7,10 @@ language: go
 addons:
   apt:
     packages:
-    # needed for the nfpm pipe:
-    - rpm
-    # needed for the snap pipe:
-    - snapd
+      # needed for the nfpm pipe:
+      - rpm
+      # needed for the snap pipe:
+      - snapd
 
 branches:
   only:
@@ -26,9 +26,8 @@ notifications:
 
 env:
   # needed for the snap pipe:
-  - PATH=/snap/bin:$PATH
   # enforcing go mod in GOPATH
-  - GO111MODULE=on
+  - PATH=/snap/bin:$PATH GO111MODULE=on
 
 services:
   - docker
@@ -41,13 +40,16 @@ before_script:
 
 script:
   - golangci-lint run # run a bunch of code checkers/linters in parallel
-  - go test -v -race ./... # run all the tests with the race detector enabled
+  - go test -v -race -coverprofile=coverage.txt -covermode=atomic ./... # run all the tests with the race detector enabled
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 # calls goreleaser
 deploy:
-- provider: script
-  skip_cleanup: true
-  script: curl -sL https://git.io/goreleaser | bash
-  on:
-    tags: true
-    condition: $TRAVIS_OS_NAME = linux
+  - provider: script
+    skip_cleanup: true
+    script: curl -sL https://git.io/goreleaser | bash
+    on:
+      tags: true
+      condition: $TRAVIS_OS_NAME = linux

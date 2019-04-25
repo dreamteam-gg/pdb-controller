@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: pdb-controller
-        image: dreamteam-gg/pdb-controller:latest
+        image: quay.io/dreamteam/pdb-controller:latest
         resources:
           limits:
             cpu: 200m
